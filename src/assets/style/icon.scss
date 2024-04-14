@@ -1,0 +1,9 @@
+.app-svg-icon {
+  //width: max-content;
+}
+
+.app-layout.ant-layout {
+  .app-svg-icon.ant-menu-item-icon {
+    min-width: max-content;
+  }
+}

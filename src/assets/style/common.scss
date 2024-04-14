@@ -1,0 +1,83 @@
+.app-layout.ant-layout {
+
+  .ant-layout-header {
+    padding: 0;
+
+    .header {
+      .inner-header {
+        //display: flex;
+        //align-items: center;
+        //justify-content: space-between;
+        min-height: 120px;
+
+        .trigger {
+          font-size: 1.25rem;
+          cursor: pointer;
+          transition: color 0.3s ease 0s;
+        }
+      }
+    }
+  }
+
+
+  .ant-layout-content {
+    min-height: calc(100vh - 635px);
+    margin: 80px 0;
+
+    .content {
+      .content-item {
+        padding: 25px 0;
+
+        &:not(:first-child) {
+          margin-top: 50px;
+        }
+
+        .content-item-inner {
+          background: $color-white;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgb(0 0 0 / 0.05);
+        }
+      }
+    }
+  }
+
+  .ant-layout-footer {
+    padding: 0;
+    position: relative;
+
+    .footer {
+      .inner-footer {
+        .app-footer-top {
+          min-height: 415px;
+          padding: 80px 0;
+        }
+
+        .app-footer-bottom {
+          font-size: 16px;
+          min-height: 100px;
+          position: relative;
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: calc(100% + 40px);
+            height: 1px;
+            background: $color-secondary;
+            opacity: 0.5;
+          }
+        }
+
+        .app-footer-back-to-top {
+          position: absolute;
+          right: 30px;
+          bottom: 30px;
+          width: 32px;
+          height: 32px;
+          background: $color-primary;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}

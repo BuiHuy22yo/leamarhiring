@@ -1,0 +1,31 @@
+.app-button {
+  .ant-btn {
+    min-height: 50px;
+    padding: 15px 30px;
+    border-radius: 50px;
+    max-width: max-content;
+    line-height: normal;
+
+    &.ant-btn-default:not(:disabled):not(.ant-btn-disabled) {
+      background: $color-white;
+      border-color: $color-white;
+      color: $color-primary;
+
+      &:hover {
+        border-color: $color-white;
+        color: $color-primary;
+      }
+    }
+
+    &.ant-btn-primary:not(:disabled):not(.ant-btn-disabled) {
+      background: $color-primary;
+      border-color: $color-primary;
+      color: $color-white;
+
+      &:hover {
+        border-color: $color-primary;
+        color: $color-white;
+      }
+    }
+  }
+}

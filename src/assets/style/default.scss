@@ -1,0 +1,148 @@
+body {
+  background: $color-white;
+  color: $color-primary;
+  font-family: $font-family;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.5;
+
+  &.title-large {
+    font-weight: 600;
+    font-size: 48px;
+  }
+}
+
+p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+}
+
+//::-webkit-scrollbar {
+//  width: 6px;
+//  background-color: transparent;
+//}
+
+::-webkit-scrollbar-track {
+  background-color: $bg-color-scrollbar-track;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $bg-color-scrollbar-thumb;
+  border-radius: 40px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $bg-color-scrollbar-thumb;
+}
+
+.F14M21 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.F14B21 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.F16M24 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.F16B24 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.F18M27 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.F18B27 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.F24M36 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.F24B36 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.color-bg-inherit {
+  background: inherit;
+  color: inherit;
+}
+
+.color-bg-primary {
+  background-color: $color-primary !important;
+  color: $color-white !important;
+}
+
+.color-bg-secondary {
+  background-color: $bg-color-primary-hover !important;
+  color: $color-primary !important;
+}
+
+.color-bg-hover-menu {
+  background-color: transparent !important;
+  color: transparent !important;
+}
+
+.color-text-primary {
+  color: $color-primary
+}
+
+.color-bg-secondary {
+  background-color: $bg-color-primary !important;
+  color: inherit !important;
+}
+
+.border-bottom-primary {
+  border-bottom: 2px solid $color-primary;
+}
+
+.border-bottom-secondary {
+  border-bottom: 2px solid $color-white;
+}
+
+
+
+
+

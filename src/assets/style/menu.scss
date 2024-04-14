@@ -1,0 +1,58 @@
+.app-layout.ant-layout {
+  .app-menu {
+
+    .ant-menu {
+      @extend .color-bg-inherit;
+      border-inline-end: unset !important;
+      border: none;
+
+      &:after {
+      }
+
+      .ant-menu-item {
+        height: auto;
+        line-height: 1.5;
+
+        &:hover {
+          @extend .color-bg-hover-menu;
+
+          &:after {
+            border-color: transparent;
+          }
+        }
+
+        .ant-menu-title-content {
+          color: $color-white;
+        }
+      }
+
+      .ant-menu-item-selected {
+        color: transparent;
+        background: transparent;
+      }
+    }
+
+    &.app-menu-header {
+      .ant-menu {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        line-height: 40px;
+
+        .ant-menu-item {
+          padding: 0 16px;
+        }
+      }
+    }
+
+    &.app-menu-footer {
+      .ant-menu {
+        font-size: 16px;
+
+        .ant-menu-item {
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+}
