@@ -20,7 +20,7 @@ const AppGlobalFooter = () => {
         <div className='app-container mx-auto px-5'>
           <div className='inner-footer'>
             <div className='app-footer-top'>
-              <Row gutter={[16, 16]}>
+              <Row gutter={[40, 40]}>
                 <Col xs={24} sm={24} md={12} lg={8}  xl={8} xxl={8}>
                   <AppLogo className='app-logo-footer' showTitle={false} />
                   <div className='mt-6'>

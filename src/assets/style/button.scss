@@ -28,4 +28,34 @@
       }
     }
   }
+
+  &.app-btn-border-primary {
+    .ant-btn {
+      &.ant-btn-default:not(:disabled):not(.ant-btn-disabled) {
+        background: $color-white;
+        border-color: $color-primary;
+        color: $color-primary;
+
+        &:hover {
+          border-color: $color-primary;
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+  &.app-btn-border-secondary {
+    .ant-btn {
+      &.ant-btn-default:not(:disabled):not(.ant-btn-disabled) {
+        background: $color-primary;
+        border-color: $color-white;
+        color: $color-white;
+
+        &:hover {
+          border-color: $color-white;
+          color: $color-white;
+        }
+      }
+    }
+  }
 }

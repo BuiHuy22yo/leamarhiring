@@ -1,17 +1,17 @@
 import {Metadata} from 'next';
 import {useTranslation} from '@/locales/index';
 
-const { t } = await useTranslation()
+const {t} = await useTranslation()
 
 export const metadata: Metadata = {
     title: t('contact-us.title'),
 }
 
-const PageLayout = ({ children }: { children: React.ReactNode }) => {
+const PageLayout = ({children}: { children: React.ReactNode }) => {
     return (
-        <div className='wrapper'>
-            { children }
-        </div>
+        <>
+            {children}
+        </>
     )
 }
 export default PageLayout

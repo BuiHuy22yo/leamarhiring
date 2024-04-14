@@ -10,7 +10,7 @@ import { usePathname, useRouter } from 'next/navigation'
 const { Header, Footer, Sider, Content } = Layout
 
 const Style: React.CSSProperties = {
-  backgroundColor: Background.white,
+  backgroundColor: Colors.secondary_1,
   color: Colors.primary,
 }
 

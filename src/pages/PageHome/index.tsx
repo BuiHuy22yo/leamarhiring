@@ -7,64 +7,29 @@ import AppSvgIcon from '@/components/AppSvgIcon/index'
 import AppImages from '@/components/AppImages/index'
 import url from '@/assets/images/images-home.png'
 import AppCarousel from '@/components/AppCarousel/index'
-import urlCarousell from '@/assets/images/logo-Carousell.png'
-import urlLandmark from '@/assets/images/logo-Landmark.png'
-import urlMadrelle from '@/assets/images/logo-Madrelle.png'
-import urlRemote from '@/assets/images/logo-Remote.png'
-import urlSgtech from '@/assets/images/logo-Sgtech.png'
-import urlSkuad from '@/assets/images/logo-Skuad.png'
-import urlDeel from '@/assets/images/logo-Deel.png'
-import urlJago from '@/assets/images/logo-Jago.png'
 import urlIcon1 from '@/assets/images/icon1.png'
 import urlIcon2 from '@/assets/images/icon2.png'
 import urlIcon3 from '@/assets/images/icon3.png'
 import urlIcon4 from '@/assets/images/icon4.png'
 import AppLogo from '@/components/AppMenu/AppLogo'
+import {BrandsArray} from "@/router/index";
 
 const PageHome = async () => {
-
-    const carouselArray = [
-        {
-            src: urlLandmark.src
-        },
-        {
-            src: urlCarousell.src
-        },
-
-        {
-            src: urlMadrelle.src
-        },
-        {
-            src: urlRemote.src
-        },
-        {
-            src: urlSgtech.src
-        },
-        {
-            src: urlSkuad.src
-        },
-        {
-            src: urlDeel.src
-        },
-        {
-            src: urlJago.src
-        }
-    ]
 
     return (
         <>
             <div className="content-item">
                 <div className='app-container mx-auto px-5'>
                     <div className="content-item-wrapper">
-                        <Row gutter={[16, 16]}>
+                        <Row gutter={[40, 40]}>
                             <Col xs={24} sm={24} md={14} lg={14} xl={14} xxl={14}>
                                 <h1 className="title-large color-text-primary border-bottom-primary pb-4 mb-4">
                                     Grow and scale up your company with our suite of world's top HR services.
                                 </h1>
-                                <p className='mb-4'>Harness the power of global talent to drive your company’s growth.
+                                <p className='mb-5'>Harness the power of global talent to drive your company’s growth.
                                     Grow and scale up your
                                     company with our suite of world’s top HR services.</p>
-                                <AppButton type={'primary'} className='pt-4'>
+                                <AppButton type={'primary'} className='pt-5'>
                                     <div className='flex items-center'>
                                         <span className='mr-3'>Contact us</span>
                                         <AppSvgIcon name='ArrowLongRightIcon'/>
@@ -84,7 +49,7 @@ const PageHome = async () => {
                         <h1 className=" text-center mb-4">
                             Trusted by start-ups and companies worldwide.
                         </h1>
-                        <AppCarousel carouselArray={carouselArray}/>
+                        <AppCarousel carouselArray={BrandsArray}/>
                     </div>
                 </div>
             </div>
@@ -149,11 +114,11 @@ const PageHome = async () => {
                                 <div className="content-item-inner p-10 color-bg-primary">
                                     <AppLogo className='app-image--ur-featured-services max-w-[250px]' showTitle={false} />
                                     <h1 className='title-large my-9 pb-9 border-bottom-secondary'>Our featured services.</h1>
-                                    <p>We specialize in providing tailored solutions to meet your unique recruitment and
+                                    <p className='mb-5'>We specialize in providing tailored solutions to meet your unique recruitment and
                                         HR needs. From sourcing top-tier talent to ensuring seamless HR and payroll
                                         management, our services are designed to empower your business while maintaining
                                         compliance and efficiency. Experience the Leamar Hiring difference today.</p>
-                                    <AppButton className='mt-5'>
+                                    <AppButton className='pt-5'>
                                         <div className='flex items-center'>
                                             <span className='mr-3'>Read more</span>
                                             <AppSvgIcon name='ArrowLongRightIcon'/>
