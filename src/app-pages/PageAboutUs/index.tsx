@@ -9,7 +9,7 @@ import AppImages from '@/components/AppImages/index'
 import { BrandsArray } from "@/router/index";
 
 const PageAboutUs =  () => {
-    console.log('BrandsArray', BrandsArray)
+
     return (
         <>
             <div className="content-item">

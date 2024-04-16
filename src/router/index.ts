@@ -8,8 +8,6 @@ import urlSkuad from '@/assets/images/logo-Skuad.png'
 import urlDeel from '@/assets/images/logo-Deel.png'
 import urlJago from '@/assets/images/logo-Jago.png'
 
-console.log('urlCarousell', urlCarousell)
-
 const FooterGeneral : Array<MenuObject> = [
     {
         path: '/',
@@ -32,23 +30,23 @@ const FooterGeneral : Array<MenuObject> = [
 const FooterServices : Array<MenuObject> = [
 
     {
-        path: '/',
+        path: '/services',
         title: 'employer_of_record.title',
     },
     {
-        path: '/',
+        path: '/services',
         title: 'recruitment.title',
     },
     {
-        path: '/',
+        path: '/services',
         title: 'payroll_outsourcing.title',
     },
     {
-        path: '/',
+        path: '/services',
         title: 'equipment_procurement.title',
     },
     {
-        path: '/',
+        path: '/services',
         title: 'remote_office_space_solutions.title',
     },
 ]
@@ -63,7 +61,7 @@ const FooterFollowUs = [
         title: 'instagram.title',
     },
     {
-        link: '/blog',
+        link: '/',
         title: 'linkedin.title',
     },
 ]
@@ -118,6 +116,5 @@ const BrandsArray = [
         src: urlJago.src
     }
 ]
-console.log('BrandsArray', BrandsArray)
 
 export { AppMenuArray, FooterGeneral, FooterServices, FooterFollowUs, BrandsArray }

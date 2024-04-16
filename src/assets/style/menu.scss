@@ -43,6 +43,10 @@
 
         .ant-menu-item {
           padding: 0 16px;
+          &:after {
+            border-color: $color-primary;
+            border-width: 0;
+          }
         }
       }
     }
