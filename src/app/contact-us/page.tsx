@@ -1,6 +1,6 @@
-import PageContactUs from '@/pages/PageContactUs'
+import PageContactUs from '@/app-pages/PageContactUs/index.tsx'
 
-const ContactUs = async () => {
+const ContactUs = () => {
 
     return (
         <PageContactUs/>

@@ -1,9 +1,13 @@
-import PageServices from '@/pages/PageServices'
+"use client"
 
-const Services = async () => {
+import PageServices from '@/app-pages/PageServices/index.tsx'
+
+const Services = () => {
 
     return (
-        <PageServices/>
+        <>
+            <PageServices/>
+        </>
     )
 }
 

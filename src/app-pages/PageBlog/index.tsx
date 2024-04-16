@@ -1,5 +1,5 @@
 
-const PageBlog = async () => {
+const PageBlog = () => {
 
     return (
         <div>PageBlog</div>

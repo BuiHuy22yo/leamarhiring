@@ -2,29 +2,40 @@
 
 import React from "react";
 import { Image } from 'antd';
+import AppMenu from "../AppMenu/AppMenu";
 
 interface Props {
-    src: null
+    src: string | null
     preview?: boolean
+    className?: string | null,
 }
 
-const defaultProps = {
-    preview: false
+const defaultProps:Props = {
+    src: null,
+    preview: false,
+    className: null,
 }
 
-const AppImages = ({...props}: Props) => {
-    const {src,preview, className} = {...defaultProps, ...props}
-    console.log('src', props.src)
+const AppImages: React.FC<Props> = (props) => {
+    const {src,preview, className} = { ...props}
 
     return (
         <div className={`app-image ${className || ''}`}>
-            <Image
-                width='w-full'
-                src={src}
-                preview={preview}
-            />
+
+            {src &&  (
+                <>
+                    <Image
+                        width='w-full'
+                        src={src}
+                        preview={preview}
+                    />
+                </>
+            )
+            }
         </div>
     )
 }
+
+AppImages.defaultProps = defaultProps;
 
 export default AppImages

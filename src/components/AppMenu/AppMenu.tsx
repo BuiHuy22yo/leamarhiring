@@ -1,24 +1,26 @@
 "use client"
 
 import { Menu } from 'antd'
-import {useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { MenuItem, MenuObject } from '@/types/menu'
 import type { MenuProps } from 'antd'
 import { useRouter } from 'next/navigation';
 import { useTranslation } from '@/locales/client'
 import AppSvgIcon from '@/components/AppSvgIcon/index';
-
+import AppLogo from "./AppLogo";
 
 interface Props {
-    className: string,
-    mode?: 'vertical' | 'vertical-right' | 'horizontal' | 'inline',
-    theme?: 'light' | 'dark'
+    className?: string | null;
+    mode?: 'vertical' | 'horizontal' | 'inline' | undefined;
+    theme?: 'light' | 'dark';
+    menu?: Array<any>;
 }
 
-const defaultProps = {
+const defaultProps:Props = {
     className: null,
     mode: 'vertical',
-    theme: 'light'
+    theme: 'light',
+    menu: []
 }
 
 const getItem = (
@@ -35,11 +37,11 @@ const getItem = (
     } as MenuItem
 }
 
-const AppMenu = ({...props}: Props) => {
-    const { menu, className, mode, theme } = { ...defaultProps, ...props}
+const AppMenu: React.FC<Props> = (props) => {
+    const { menu, className, mode, theme } = { ...props}
     const [MenuItems, setMenuItems] = useState<Array<MenuItem>>([])
     const router = useRouter();
-    const [current, setCurrent] = useState<String>('0');
+    const [current, setCurrent] = useState<string>('0');
     const { t } = useTranslation('translation')
 
     const getMenu = () => {
@@ -91,5 +93,7 @@ const AppMenu = ({...props}: Props) => {
         </>
     )
 }
+
+AppMenu.defaultProps = defaultProps;
 
 export default AppMenu

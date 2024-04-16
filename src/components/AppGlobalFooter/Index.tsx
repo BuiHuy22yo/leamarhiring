@@ -29,15 +29,15 @@ const AppGlobalFooter = () => {
                 </Col>
                 <Col xs={24} sm={24} md={12} lg={3}  xl={3} xxl={3}>
                   <div className='title title-general mb-4'>General</div>
-                  <AppMenu menu={FooterGeneral} mode={'vertical-right'} className='app-menu-footer app-menu-footer-general'/>
+                  <AppMenu menu={FooterGeneral} mode={'vertical'} className='app-menu-footer app-menu-footer-general'/>
                 </Col>
                 <Col xs={24} sm={24} md={12} lg={7}  xl={7} xxl={7}>
                   <div className='title title-services mb-4'>Services</div>
-                  <AppMenu menu={FooterServices} mode={'vertical-right'} className='app-menu-footer app-menu-footer-services'/>
+                  <AppMenu menu={FooterServices} mode={'vertical'} className='app-menu-footer app-menu-footer-services'/>
                 </Col>
                 <Col xs={24} sm={24} md={12} lg={5}  xl={5} xxl={5}>
                   <div className='title title-follow-us mb-4'>Follow Us</div>
-                  <AppMenu menu={FooterFollowUs} mode={'vertical-right'} className='app-menu-footer app-menu-footer-follow-us'/>
+                  <AppMenu menu={FooterFollowUs} mode={'vertical'} className='app-menu-footer app-menu-footer-follow-us'/>
                 </Col>
               </Row>
             </div>

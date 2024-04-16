@@ -6,18 +6,22 @@ import AppImages from '@/components/AppImages/index'
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import AppButton from "../AppButton/index";
 
 
 interface Props {
     carouselArray?: Array<any>
+    className?: string | null;
 }
 
-const defaultProps = {
-    carouselArray: []
+const defaultProps: Props = {
+    carouselArray: [],
+    className: null,
 }
 
-const AppCarousel = ({ ...props }: Props)=> {
-    const { type, carouselArray, className } = { ...defaultProps, ...props }
+const AppCarousel: React.FC<Props> = (props) => {
+    // const { type, carouselArray, className } = { ...props }
+    const { className } = { ...props }
 
     const options = {
         loop: true,
@@ -56,5 +60,7 @@ const AppCarousel = ({ ...props }: Props)=> {
 
     )
 }
+
+AppCarousel.defaultProps = defaultProps;
 
 export default AppCarousel

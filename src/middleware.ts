@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 import acceptLanguage from 'accept-language'
 import { fallbackLng, languages } from '@/locales/i18n'
 
@@ -12,12 +12,12 @@ export const config = {
 const cookieName = 'i18next'
 const searchParamName = 'lng'
 
-export function middleware(req) {
+export function middleware(req: NextRequest) {
     if (req.nextUrl.pathname.indexOf('icon') > -1 || req.nextUrl.pathname.indexOf('chrome') > -1) return NextResponse.next()
 
     let lngInSearchParams, lngInCookie, lngInAcceptHeader
     if (req.nextUrl.searchParams.has(searchParamName)) lngInSearchParams = acceptLanguage.get(req.nextUrl.searchParams.get(searchParamName))
-    if (req.cookies.has(cookieName)) lngInCookie = acceptLanguage.get(req.cookies.get(cookieName).value)
+    if (req.cookies.has(cookieName)) lngInCookie = acceptLanguage.get(req.cookies.get(cookieName)?.value)
     lngInAcceptHeader = acceptLanguage.get(req.headers.get('Accept-Language'))
     const lng = lngInSearchParams || lngInCookie || lngInAcceptHeader || fallbackLng
     // const lng = lngInSearchParams || lngInCookie || lngInAcceptHeader || fallbackLng

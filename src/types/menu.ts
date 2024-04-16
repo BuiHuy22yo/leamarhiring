@@ -4,6 +4,7 @@ export interface MenuObject {
   breadcrumbText?: string
   icon?: any
   hidden?: boolean
+  children?: MenuObject[]
 }
 
 export interface MenuItem {

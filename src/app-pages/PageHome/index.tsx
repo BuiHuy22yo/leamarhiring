@@ -14,7 +14,7 @@ import urlIcon4 from '@/assets/images/icon4.png'
 import AppLogo from '@/components/AppMenu/AppLogo'
 import {BrandsArray} from "@/router/index";
 
-const PageHome = async () => {
+const PageHome = () => {
 
     return (
         <>
@@ -24,7 +24,7 @@ const PageHome = async () => {
                         <Row gutter={[40, 40]}>
                             <Col xs={24} sm={24} md={14} lg={14} xl={14} xxl={14}>
                                 <h1 className="title-large color-text-primary border-bottom-primary pb-4 mb-4">
-                                    Grow and scale up your company with our suite of world's top HR services.
+                                    Grow and scale up your company with our suite of world’s top HR services.
                                 </h1>
                                 <p className='mb-5'>Harness the power of global talent to drive your company’s growth.
                                     Grow and scale up your

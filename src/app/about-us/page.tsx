@@ -1,9 +1,14 @@
-import PageAboutUs from '@/pages/PageAboutUs'
+"use client"
 
-const AboutUs = async () => {
+import PageAboutUs from '@/app-pages/PageAboutUs/index.tsx'
+
+const AboutUs = () => {
 
     return (
-        <PageAboutUs/>
+        <>
+            <div>1</div>
+            <PageAboutUs/>
+        </>
     )
 }
 

@@ -4,7 +4,7 @@ import React from "react";
 import {Col, Row} from "antd";
 import AppSvgIcon from '@/components/AppSvgIcon/index'
 
-const PageContactUs = async () => {
+const PageContactUs = () => {
 
     return (
         <>
@@ -36,7 +36,7 @@ const PageContactUs = async () => {
                                         <AppSvgIcon name='GlobeAltIcon' className='color-text-primary'/>
                                         <p className='ml-2'>www.leamarhiring.com</p>
                                     </div>
-                                    <div className='social-icons'></div>
+                                    {/*<div className='social-icons'></div>*/}
                                 </div>
                             </Col>
                             <Col xs={24} sm={24} md={24} lg={12} xl={12} xxl={12}>

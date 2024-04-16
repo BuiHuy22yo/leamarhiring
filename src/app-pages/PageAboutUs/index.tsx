@@ -8,7 +8,7 @@ import AppSvgIcon from '@/components/AppSvgIcon/index'
 import AppImages from '@/components/AppImages/index'
 import { BrandsArray } from "@/router/index";
 
-const PageAboutUs = async () => {
+const PageAboutUs =  () => {
     console.log('BrandsArray', BrandsArray)
     return (
         <>
@@ -54,7 +54,7 @@ const PageAboutUs = async () => {
                         </h1>
                         <Row gutter={[40, 40]}>
                             {BrandsArray && BrandsArray.length > 0 && BrandsArray.map((item, index) => (
-                                <Col xs={24} sm={24} md={12} lg={8} xl={6} xxl={6}>
+                                <Col xs={24} sm={24} md={12} lg={8} xl={6} xxl={6} key={index}>
                                     <div className='brands-item' key={index}>
                                         <AppImages src={item.src}/>
                                     </div>

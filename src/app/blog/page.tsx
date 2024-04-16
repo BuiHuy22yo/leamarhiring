@@ -1,6 +1,6 @@
-import PageBlog from '@/pages/PageBlog'
+import PageBlog from '@/app-pages/PageBlog/index.tsx'
 
-const Blog = async () => {
+const Blog = () => {
 
     return (
         <PageBlog/>

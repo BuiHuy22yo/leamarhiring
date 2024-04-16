@@ -1,11 +1,14 @@
 "use client"
 
-import PageHome from '@/pages/PageHome'
+import PageHome from '@/app-pages/PageHome/index.tsx'
 
-export default function Home() {
-  return (
-      <>
-        <PageHome/>
-      </>
-  )
+const Home = () => {
+
+    return (
+        <>
+            <PageHome/>
+        </>
+    )
 }
+
+export default Home

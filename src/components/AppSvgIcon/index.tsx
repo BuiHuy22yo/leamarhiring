@@ -3,29 +3,32 @@
 import React, {useEffect} from 'react';
 import * as OIcons from '@heroicons/react/24/outline'
 import * as SIcons from '@heroicons/react/24/solid'
+import AppMenu from "../AppMenu/AppMenu";
 
 interface Props {
     disabled?: boolean,
-    name: string,
+    name?: string,
     type?: 'outline' | 'solid',
     color?: string,
     isDefaultClass?: boolean,
+    className?: string | null,
 }
 
-const defaultProps = {
+const defaultProps: Props = {
     disabled: false,
     name: '',
     type: 'outline',
     color: '',
-    isDefaultClass: true
+    isDefaultClass: true,
+    className: null,
 }
 
 const defaultClassSvg = 'md:w-3 md:h-3 lg:w-5 lg:h-5'
 const disabledClassSvg = 'disabled'
 
-const AppSvgIcon = ({ ...props }: Props) => {
-    const { disabled, type, color, className, isDefaultClass } = { ...defaultProps, ...props}
-    let icons = { ...OIcons }
+const AppSvgIcon: React.FC<Props> = (props) => {
+    const { disabled, type, color, className, isDefaultClass } = { ...props}
+    let icons: Record<string, React.ElementType> = { ...OIcons }
     let disCls = ''
     let cls = isDefaultClass ? `${defaultClassSvg}` : ''
     const Style: React.CSSProperties = {
@@ -38,7 +41,7 @@ const AppSvgIcon = ({ ...props }: Props) => {
         icons = { ...OIcons }
     }
 
-    const SvgIcon: JSX.Element = icons[props.name]
+    const SvgIcon = icons[props.name as keyof typeof icons]
 
     useEffect(() => {
         if(disabled){
@@ -52,10 +55,13 @@ const AppSvgIcon = ({ ...props }: Props) => {
     return (
         <>
             <div className={`app-svg-icon ${className || ''}`}>
-                <SvgIcon aria-hidden='true' className={cls} style={Style} />
+                {SvgIcon ? <SvgIcon aria-hidden='true' className={cls} style={Style} /> : null}
             </div>
         </>
     )
 }
+
+AppSvgIcon.defaultProps = defaultProps;
+
 
 export default AppSvgIcon

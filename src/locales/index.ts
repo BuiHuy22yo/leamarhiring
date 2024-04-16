@@ -5,12 +5,12 @@ import { getOptions, languages, fallbackLng } from './i18n'
 import { cookies, headers } from 'next/headers'
 import acceptLanguage from 'accept-language'
 
-const initI18next = async (lng, ns) => {
+const initI18next = async (lng: string, ns: string) => {
     // on server side we create a new instance for each render, because during compilation everything seems to be executed in parallel
     const i18nInstance = createInstance()
     await i18nInstance
         .use(initReactI18next)
-        .use(resourcesToBackend((language, namespace) => import(`./${language}/${namespace}.json`)))
+        .use(resourcesToBackend((language: string, namespace: string) => import(`./${language}/${namespace}.json`)))
         .init(getOptions(lng, ns))
     return i18nInstance
 }
@@ -27,13 +27,13 @@ export function detectLanguage() {
         const qsObj = JSON.parse(nextUrlHeader.substring(nextUrlHeader.indexOf('{'), nextUrlHeader.indexOf(`}`) + 1))
         lng = qsObj.lng
     }
-    if (!lng && ckies.has(cookieName)) lng = acceptLanguage.get(ckies.get(cookieName).value)
+    if (!lng && ckies.has(cookieName)) lng = acceptLanguage.get(ckies.get(cookieName)?.value)
     if (!lng) lng = acceptLanguage.get(hders.get('Accept-Language'))
     if (!lng) lng = fallbackLng
-    return lng
+    return lng ?? fallbackLng
 }
 
-export async function useTranslation(ns, options = {}) {
+export async function useTranslation(ns: string, options: { keyPrefix?: string } = {}) {
     const lng = detectLanguage()
     const i18nextInstance = await initI18next(lng, ns)
     return {
