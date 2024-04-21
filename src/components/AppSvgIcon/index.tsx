@@ -12,6 +12,7 @@ interface Props {
     color?: string,
     isDefaultClass?: boolean,
     className?: string | null,
+    rotate?: number | null
 }
 
 const defaultProps: Props = {
@@ -21,13 +22,14 @@ const defaultProps: Props = {
     color: '',
     isDefaultClass: true,
     className: null,
+    rotate: null
 }
 
 const defaultClassSvg = 'md:w-3 md:h-3 lg:w-5 lg:h-5'
 const disabledClassSvg = 'disabled'
 
 const AppSvgIcon: React.FC<Props> = (props) => {
-    const { disabled, type, color, className, isDefaultClass } = { ...props}
+    const { disabled, type, color, className, isDefaultClass, rotate } = { ...props}
     let icons: Record<string, React.ElementType> = { ...OIcons }
     let disCls = ''
     let cls = isDefaultClass ? `${defaultClassSvg}` : ''
@@ -55,7 +57,7 @@ const AppSvgIcon: React.FC<Props> = (props) => {
     return (
         <>
             <div className={`app-svg-icon ${className || ''}`}>
-                {SvgIcon ? <SvgIcon aria-hidden='true' className={cls} style={Style} /> : null}
+                {SvgIcon ? <SvgIcon aria-hidden='true' className={cls} style={Style} rotate={rotate}/> : null}
             </div>
         </>
     )

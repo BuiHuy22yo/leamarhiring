@@ -6,14 +6,16 @@ import React from "react";
 
 interface Props {
     type?: 'text' | 'password' | 'textarea' | 'number',
-    placeholder?: string | null
+    placeholder?: string
+    value?: string
     className?: string | null
-    rows: number | null
+    rows?: number
 }
 
 const defaultProps: Props = {
     type: 'text',
-    placeholder: null,
+    placeholder: '',
+    value: '',
     className: null,
     rows: 4
 }
@@ -38,7 +40,7 @@ const AppInput: React.FC<Props> = (props) => {
             }
             {
                 type === 'textarea' && (
-                    <TextArea value={value} placeholder={placeholder} row={4}/>
+                    <TextArea value={value} placeholder={placeholder} rows={rows}/>
                 )
             }
         </div>

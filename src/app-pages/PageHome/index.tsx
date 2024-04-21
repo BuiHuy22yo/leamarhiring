@@ -43,22 +43,22 @@ const PageHome = () => {
         {
             key: '1',
             label: 'Unlocking Your Workforce Potential with HD Global Career',
-            children: <p>Whether you're a small startup or a global corporation, HD Global Career is here to help you
-                unlock the full potential of your workforce. Let's embark on this journey together and redefine what's
+            children: <p>Whether you’re a small startup or a global corporation, HD Global Career is here to help you
+                unlock the full potential of your workforce. Let’s embark on this journey together and redefine what’s
                 possible for your business.</p>
         },
         {
             key: '2',
             label: 'Top Headhunters: Bridging Talent and Global Companies',
-            children: <p>Whether you're a small startup or a global corporation, HD Global Career is here to help you
-                unlock the full potential of your workforce. Let's embark on this journey together and redefine what's
+            children: <p>Whether you’re a small startup or a global corporation, HD Global Career is here to help you
+                unlock the full potential of your workforce. Let’s embark on this journey together and redefine what’s
                 possible for your business.</p>
         },
         {
             key: '3',
             label: `Contact Us to Elevate Your Organization's Success Today`,
-            children: <p>Whether you're a small startup or a global corporation, HD Global Career is here to help you
-                unlock the full potential of your workforce. Let's embark on this journey together and redefine what's
+            children: <p>Whether you’re a small startup or a global corporation, HD Global Career is here to help you
+                unlock the full potential of your workforce. Let’s embark on this journey together and redefine what’s
                 possible for your business.</p>
         }
     ]
@@ -147,7 +147,8 @@ const PageHome = () => {
                                             <AppImages src={urlAbout_1.src} className='w-[30px] h-[30px]'/>
                                         </div>
                                         <div className='inner-item'>
-                                            <h3 className='mb-2 font-medium color-primary-title'>Understanding Organizational Success</h3>
+                                            <h3 className='mb-2 font-medium color-primary-title'>Understanding
+                                                Organizational Success</h3>
                                             <p>At HD Global Career, we acknowledge that the essence of every thriving
                                                 organization lies within its people.</p>
                                         </div>
@@ -157,9 +158,10 @@ const PageHome = () => {
                                             <AppImages src={urlAbout_2.src} className='w-[30px] h-[30px]'/>
                                         </div>
                                         <div className='inner-item'>
-                                            <h3 className='mb-2 font-medium color-primary-title'>Empowering Organizational Vitality</h3>
+                                            <h3 className='mb-2 font-medium color-primary-title'>Empowering
+                                                Organizational Vitality</h3>
                                             <p>As your dedicated Human Resources partner, we strive to enhance your
-                                                company's vitality by providing tailored solutions that empower your
+                                                company’s vitality by providing tailored solutions that empower your
                                                 workforce and drive organizational success.</p>
                                         </div>
                                     </div>
@@ -189,8 +191,9 @@ const PageHome = () => {
                                     <div className='item-images'>
                                         <AppImages src={urlServices_1.src} className='w-[40px] h-[40px]'/>
                                     </div>
-                                    <h2 className='mt-9 font-semibold color-primary-title' >Recruitment and Staffing</h2>
-                                    <p style={{marginTop: '18px'}}>From sourcing top-tier talent to conducting rigorous screening and assessments,
+                                    <h2 className='mt-9 font-semibold color-primary-title'>Recruitment and Staffing</h2>
+                                    <p style={{marginTop: '18px'}}>From sourcing top-tier talent to conducting rigorous
+                                        screening and assessments,
                                         we handle every aspect of the recruitment process to ensure you find the right
                                         fit for your team.</p>
                                 </div>
@@ -201,7 +204,8 @@ const PageHome = () => {
                                     <div className='item-images'>
                                         <AppImages src={urlServices_2.src} className='w-[40px] h-[40px]'/>
                                     </div>
-                                    <h2 className='mb-8 mt-9 font-semibold color-primary-title'>Employee Engagement and Development:</h2>
+                                    <h2 className='mb-8 mt-9 font-semibold color-primary-title'>Employee Engagement and
+                                        Development:</h2>
                                     <p>We design and implement strategies to enhance employee engagement, foster a
                                         positive company culture, and invest in the professional development of your
                                         workforce.</p>
@@ -213,9 +217,10 @@ const PageHome = () => {
                                     <div className='item-images'>
                                         <AppImages src={urlServices_3.src} className='w-[40px] h-[40px]'/>
                                     </div>
-                                    <h2 className='mb-8 mt-9 font-semibold color-primary-title'>Outplacement Services</h2>
-                                    <p> In times of transition, we offer compassionate outplacement services to support
-                                        employees through career transitions while safeguarding your employer's brand
+                                    <h2 className='mb-8 mt-9 font-semibold color-primary-title'>Outplacement
+                                        Services</h2>
+                                    <p>In times of transition, we offer compassionate outplacement services to support
+                                        employees through career transitions while safeguarding your employer’s brand
                                         and reputation.</p>
                                 </div>
                             </Col>
@@ -229,9 +234,8 @@ const PageHome = () => {
                         <h1 className="text-center mb-3 mt-3">
                             <span>Why you choose</span>
                             <span className='ml-2 color-text-primary'>HD Global Career</span>
-
                         </h1>
-                        <p className='text-center mb-10'>Let's Transform Your HR Experience Together
+                        <p className='text-center mb-10'>Let’s Transform Your HR Experience Together
                         </p>
                         <Row gutter={[40, 40]}>
                             <Col xs={24} sm={24} md={24} lg={14} xl={12} xxl={12} style={{textAlign: 'start'}}>
@@ -332,7 +336,8 @@ const PageHome = () => {
                                     </div>
                                 </div>
                             </div>
-                            <Form form={form} className='form-contact' layout='vertical' autoComplete='off' onFinish={onFinish}>
+                            <Form form={form} className='form-contact' layout='vertical' autoComplete='off'
+                                  onFinish={onFinish}>
                                 <Row gutter={16}>
                                     <Col xs={24} sm={24} md={24} lg={12} xl={12} xxl={12}>
                                         <Form.Item name='name'>
@@ -353,7 +358,8 @@ const PageHome = () => {
                                 <Row gutter={16}>
                                     <Col xs={24} md={24} lg={24}>
                                         <Form.Item className='app-last-form-item'>
-                                            <AppButton type={'primary'} className='btn-w-full' htmlType='submit'>Submit</AppButton>
+                                            <AppButton type={'primary'} className='btn-w-full'
+                                                       >Submit</AppButton>
                                         </Form.Item>
                                     </Col>
                                 </Row>
