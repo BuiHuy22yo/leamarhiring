@@ -14,6 +14,10 @@ const FooterGeneral : Array<MenuObject> = [
         title: 'home.title',
     },
     {
+        path: '/about',
+        title: 'about.title',
+    },
+    {
         path: '/services',
         title: 'services.title',
     },
@@ -22,8 +26,8 @@ const FooterGeneral : Array<MenuObject> = [
         title: 'blog.title',
     },
     {
-        path: '/contact-us',
-        title: 'contact-us.title',
+        path: '/why-us',
+        title: 'why-us.title',
     },
 ]
 
@@ -54,15 +58,15 @@ const FooterServices : Array<MenuObject> = [
 const FooterFollowUs = [
     {
         link: '/',
-        title: 'facebook.title',
-    },
-    {
-        link: '/services',
-        title: 'instagram.title',
+        title: 'privacy-policy.title',
     },
     {
         link: '/',
-        title: 'linkedin.title',
+        title: 'terms-condition.title',
+    },
+    {
+        link: '/',
+        title: 'faq.title',
     },
 ]
 
@@ -72,21 +76,20 @@ const AppMenuArray: Array<MenuObject> = [
         title: 'home.title',
     },
     {
-        path: '/about-us',
-        title: 'about-us.title',
+        path: '/about',
+        title: 'about.title',
     },
     {
         path: '/services',
         title: 'services.title',
-        children: FooterServices
     },
     {
         path: '/blog',
         title: 'blog.title',
     },
     {
-        path: '/contact-us',
-        title: 'contact-us.title',
+        path: '/why-us',
+        title: 'why-us.title',
     },
 ]
 

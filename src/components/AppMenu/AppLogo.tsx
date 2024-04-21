@@ -41,7 +41,11 @@ const AppLogo: React.FC<Props> = (props) => {
                 }
                 {showTitle &&  (
                     <>
-                        <h1 className='title'>{ title || t('logo.title') }</h1>
+                        {/*<h1 className='title'>{ title || t('logo.title') }</h1>*/}
+                        <div className='ml-4 title'>
+                            <div className='title-top'>global</div>
+                            <div className='title-bottom'>career</div>
+                        </div>
                     </>
                 )
                 }

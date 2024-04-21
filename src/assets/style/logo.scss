@@ -4,21 +4,35 @@
     //display: none;
     &.app-logo-header {
       .logo-images {
-        width: 80px;
-        height: 80px;
-        margin-right: 1rem;
+        width: 48px;
+        height: 42px;
       }
     }
 
     &.app-logo-footer {
       .logo-images {
-        width: 150px;
-        height: 150px;
+        width: 48px;
+        height: 42px;
       }
     }
 
     h1.title {
 
     }
+
+    div.title {
+      .title-top {
+        @extend .F12M18;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
+
+      .title-bottom {
+        @extend .F16SB24;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+
   }
 }

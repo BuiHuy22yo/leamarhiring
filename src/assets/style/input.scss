@@ -1,4 +1,24 @@
-.app-input > .ant-input,
-.app-input > .ant-input-affix-wrapper {
-  min-height: 40px;
+.app-input {
+  &:not(.app-input-textarea){
+    .ant-input, .ant-input-affix-wrapper {
+      min-height: 40px;
+    }
+  }
+
+  .ant-input {
+    color: $color-black ;
+    &:focus, &:focus-within , &:hover {
+      border-color: $color-primary;
+    }
+  }
+
+  &.app-input-textarea {
+    textarea.ant-input {
+      min-height: 107px;
+    }
+  }
+}
+
+.ant-form-item.app-last-form-item {
+  margin-bottom: 0;
 }

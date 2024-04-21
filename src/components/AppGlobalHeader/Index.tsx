@@ -28,7 +28,7 @@ const AppGlobalHeader = ({ ...props }: Props) => {
   return (
     <>
       <div className='header'>
-        <div className='app-container mx-auto px-5'>
+        <div className='app-container-header mx-auto px-5'>
           <Row gutter={[40, 40]}>
             <Col xs={24} sm={24} md={6} lg={6} xl={6} xxl={6}>
               <div className='inner-header flex items-center'>
@@ -38,7 +38,7 @@ const AppGlobalHeader = ({ ...props }: Props) => {
             <Col xs={24} sm={24} md={18} lg={18} xl={18} xxl={18}>
               <div className='inner-header flex items-center'>
               <AppMenu menu={AppMenuArray} className='app-menu-header lg:mr-4' mode={'horizontal'}/>
-              <AppButton>Apply as Talent</AppButton>
+              <AppButton type={'primary'} className='app-btn-header'>Contact now</AppButton>
                 {/*<div className='app-menu-trigger' onClick={ handleClickVisible }>*/}
                 {/*  {visible ? (*/}
                 {/*    <MenuUnfoldOutlined className='trigger' />*/}

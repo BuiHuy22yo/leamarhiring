@@ -8,7 +8,7 @@
         //display: flex;
         //align-items: center;
         //justify-content: space-between;
-        min-height: 120px;
+        min-height: 87px;
 
         .trigger {
           font-size: 1.25rem;
@@ -22,20 +22,176 @@
 
   .ant-layout-content {
     min-height: calc(100vh - 635px);
-    margin: 80px 0;
+    //margin: 80px 0;
 
     .content {
       .content-item {
-        padding: 25px 0;
+        padding: 101px 0;
 
         &:not(:first-child) {
-          margin-top: 50px;
+          margin-top: 75px;
         }
 
         .content-item-inner {
           background: $color-white;
           border-radius: 10px;
           box-shadow: 0 0 10px rgb(0 0 0 / 0.05);
+        }
+
+        .about-wrapper {
+          .item-images {
+            padding: 15px;
+            background: $bg-color-primary;
+            border-radius: 12px;
+            height: max-content;
+            width: max-content;
+          }
+
+          .inner-item {
+            h3 {
+              letter-spacing: -0.2px;
+            }
+          }
+        }
+
+        .content-item-wrapper-relative {
+          position: relative;
+        }
+        .decorate-1-about {
+          display: flex;
+          position: absolute;
+          right: -103px;
+          top: -107px;
+          max-width: 103px;
+          transform: rotate(15deg);
+        }
+        .decorate-2-about {
+          display: flex;
+          position: absolute;
+          right: -47px;
+          bottom: 40px;
+          max-width: 47px;
+          height: auto;
+
+        }
+
+        .services-wrapper {
+          padding: 20px 30px;
+          background: $color-white;
+          border-radius: 14px;
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
+
+          .item-images {
+            padding: 15px;
+            background: $bg-color-primary;
+            border-radius: 12px;
+            height: max-content;
+            width: max-content;
+          }
+
+        }
+
+        .inner-text {
+          max-width: 514px;
+          padding-top: 77px;
+          padding-bottom: 77px;
+          padding-left: 77px;
+          border-radius: 16px;
+
+          .info-wrapper {
+            .text {
+              font-size: 13px;
+              text-transform: uppercase;
+            }
+
+            .info {
+              font-size: 20px;
+              font-weight: 600;
+            }
+          }
+        }
+
+        .ant-form.form-contact {
+          margin-top: 40px;
+        }
+
+        .content-item-wrapper-relative {
+          position: relative;
+          border-radius: 16px;
+        }
+
+        .background-contact {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+
+        .employment-contact {
+          position: absolute;
+          right: -68px;
+          bottom: -6px;
+        }
+        .decorate-1-contact {
+          display: flex;
+          position: absolute;
+          top: -50px;
+          right: 0;
+          max-width: 27px;
+          transform: rotate(0deg);
+        }
+        .decorate-2-contact {
+          display: flex;
+          position: absolute;
+          right: -65px;
+          bottom: -30px;
+          max-width: 59px;
+        }
+
+        .app-carousel-item {
+          padding: 10px;
+          border: 1px solid $color-white;
+          border-radius: 14px;
+          &:hover {
+            background: $color-white;
+          }
+
+          .app-image {
+            display: flex;
+
+            .ant-image-img {
+              border-radius: 10px;
+            }
+          }
+
+          .title {
+            margin-top: 20px;
+            font-weight: 600;
+          }
+
+          .description {
+            margin-top: 20px;
+          }
+        }
+
+        .ellipse {
+          position: absolute;
+          top: -16px;
+          display: flex;
+        }
+        .ellipse-home {
+          left: 170px;
+        }
+        .ellipse-about {
+          left: 70px;
+        }
+        .ellipse-service {
+          right: 25px;
+        }
+        .ellipse-blog {
+          left: 70px;
+        }
+        .ellipse-contact {
+          left: 210px;
         }
       }
     }
@@ -48,23 +204,30 @@
     .footer {
       .inner-footer {
         .app-footer-top {
-          min-height: 415px;
-          padding: 80px 0;
+          background: $bg-color-secondary;
+          min-height: 337px;
+          padding-top: 85px;
+          padding-bottom: 50px;
         }
 
         .app-footer-bottom {
+          background: $color-black;
           font-size: 16px;
-          min-height: 100px;
+          min-height: 80px;
           position: relative;
 
+          .inner-footer-bottom {
+            min-height: 80px;
+          }
+
           &:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            width: calc(100% + 40px);
-            height: 1px;
-            background: $color-secondary;
-            opacity: 0.5;
+            //content: '';
+            //position: absolute;
+            //top: 0;
+            //width: calc(100% + 40px);
+            //height: 1px;
+            //background: $color-secondary;
+            //opacity: 0.5;
           }
         }
 
@@ -80,4 +243,28 @@
       }
     }
   }
+
+  .app-collapse.ant-collapse {
+    border: none;
+
+    .ant-collapse-item {
+      border-bottom: none;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #E2E2E2;
+      }
+
+      .ant-collapse-header {
+        color: $color-black;
+        font-size: 22px;
+        line-height: 35px;
+        font-weight: 600;
+      }
+
+      .ant-collapse-header {
+        background: $color-white;
+      }
+    }
+  }
 }
+

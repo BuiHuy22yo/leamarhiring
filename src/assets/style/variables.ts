@@ -17,8 +17,8 @@ const LayoutHeight = {
 }
 
 const GlobalFont = {
-    fontFamily: 'Roboto, sans-serif',
-    fontSize: 18,
+    fontFamily: 'Poppins, sans-serif',
+    fontSize: 16,
     colorText: 'transparent',
     backgroundColor: 'transparent',
 }

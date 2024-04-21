@@ -4,8 +4,8 @@ import {Metadata} from 'next';
 // const {t} = await useTranslation()
 
 export const metadata: Metadata = {
-    // title: t('contact-us.title'),
-    title: 'Contact Us',
+    // title: t('_contact-us.title'),
+    title: 'Why Us',
 }
 
 const PageLayout = ({children}: { children: React.ReactNode }) => {

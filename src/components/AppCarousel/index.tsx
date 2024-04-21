@@ -1,11 +1,11 @@
 "use client"
 
 import React from "react";
-import { Carousel } from 'antd';
+import {Row, Col} from 'antd'
 import AppImages from '@/components/AppImages/index'
-import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
+// import OwlCarousel from 'react-owl-carousel';
+// import 'owl.carousel/dist/assets/owl.carousel.css';
+// import 'owl.carousel/dist/assets/owl.theme.default.css';
 import AppButton from "../AppButton/index";
 
 
@@ -21,7 +21,7 @@ const defaultProps: Props = {
 
 const AppCarousel: React.FC<Props> = (props) => {
     // const { type, carouselArray, className } = { ...props }
-    const { className } = { ...props }
+    const {carouselArray, className} = {...props}
 
     const options = {
         loop: true,
@@ -49,13 +49,24 @@ const AppCarousel: React.FC<Props> = (props) => {
     return (
         <div className={`app-carousel ${className || ''}`}>
             {/*<OwlCarousel></OwlCarousel>*/}
-            {/*<OwlCarousel className="owl-carousel owl-theme" {...options}>*/}
-            {/*    { carouselArray && carouselArray.length > 0 && carouselArray.map((item, index) => (*/}
-            {/*        <div className='app-carousel-item' key={index}>*/}
-            {/*            <AppImages src={item.src}/>*/}
-            {/*        </div>*/}
-            {/*    ))}*/}
+            {/*<OwlCarousel className="owl-carousel owl-theme" >*/}
+            {/*<div>1</div>*/}
+            {/*<div>1</div>*/}
+            {/*<div>1</div>*/}
+            {/*<div>1</div>*/}
+            {/*<div>1</div>*/}
             {/*</OwlCarousel>*/}
+            <Row gutter={[20, 20]}>
+                {carouselArray && carouselArray.length > 0 && carouselArray.map((item, index) => (
+                    <Col xs={24} sm={24} md={12} lg={8} xl={6} xxl={6} key={index}>
+                        <div className='app-carousel-item'>
+                            <AppImages src={item.urlImage}/>
+                            <h3 className='title'>{item.title}</h3>
+                            <div className='description'>{item.description}</div>
+                        </div>
+                    </Col>
+                ))}
+            </Row>
         </div>
 
     )

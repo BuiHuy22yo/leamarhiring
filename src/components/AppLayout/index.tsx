@@ -15,20 +15,20 @@ const Style: React.CSSProperties = {
 }
 
 const headerStyle: React.CSSProperties = {
-  backgroundColor: Background.primary,
-  color: Colors.secondary_1,
+  backgroundColor: Background.white,
+  color: Colors.black,
   height: 'auto',
   lineHeight: 'normal'
 }
 
 const contentStyle :React.CSSProperties = {
-  backgroundColor: Colors.secondary_1,
-  color: Colors.secondary,
+  backgroundColor: Colors.white,
+  color: Colors.black,
 }
 
 const footerStyle: React.CSSProperties = {
-  backgroundColor: Background.secondary,
-  color: Colors.secondary_1,
+  backgroundColor: Background.black,
+  color: Colors.white,
 }
 
 interface Props {

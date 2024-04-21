@@ -14,7 +14,12 @@
         line-height: 1.5;
 
         &:hover {
-          @extend .color-bg-hover-menu;
+          background: transparent;
+
+          .ant-menu-title-content {
+            color: $color-black;
+            font-weight: 500;
+          }
 
           &:after {
             border-color: transparent;
@@ -22,18 +27,24 @@
         }
 
         .ant-menu-title-content {
-          color: $color-white;
+          color: $color-secondary;
+          font-weight: 500;
         }
       }
 
       .ant-menu-item-selected {
-        color: transparent;
+        color: $color-black;
         background: transparent;
+
+        .ant-menu-title-content {
+          color: $color-black;
+        }
       }
     }
 
     &.app-menu-header {
-      width: calc(100% - 185px);
+      width: calc(100% - 118px);
+
       .ant-menu {
         display: flex;
         align-items: center;
@@ -42,7 +53,8 @@
         justify-content: end;
 
         .ant-menu-item {
-          padding: 0 16px;
+          padding: 0 10px;
+
           &:after {
             border-color: $color-primary;
             border-width: 0;
@@ -59,6 +71,22 @@
           padding: 0;
           margin: 0;
           margin-bottom: 12px;
+
+          &:hover {
+            .ant-menu-title-content {
+              color: $color-secondary;
+              font-weight: 500;
+            }
+          }
+        }
+
+        .ant-menu-item-selected {
+          color: $color-secondary;
+          background: transparent;
+
+          .ant-menu-title-content {
+            color: $color-secondary;
+          }
         }
       }
     }

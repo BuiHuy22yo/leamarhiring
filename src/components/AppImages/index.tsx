@@ -25,7 +25,7 @@ const AppImages: React.FC<Props> = (props) => {
             {src &&  (
                 <>
                     <Image
-                        width='w-full'
+                        className='w-full'
                         src={src}
                         preview={preview}
                     />

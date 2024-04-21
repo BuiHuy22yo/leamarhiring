@@ -1,11 +1,11 @@
 "use client"
 
-import { Menu } from 'antd'
+import {Col, Menu} from 'antd'
 import React, {useEffect, useState} from 'react';
-import { MenuItem, MenuObject } from '@/types/menu'
-import type { MenuProps } from 'antd'
-import { useRouter } from 'next/navigation';
-import { useTranslation } from '@/locales/client'
+import {MenuItem, MenuObject} from '@/types/menu'
+import type {MenuProps} from 'antd'
+import { useRouter} from 'next/navigation';
+import {useTranslation} from '@/locales/client'
 import AppSvgIcon from '@/components/AppSvgIcon/index';
 import AppLogo from "./AppLogo";
 
@@ -16,7 +16,7 @@ interface Props {
     menu?: Array<any>;
 }
 
-const defaultProps:Props = {
+const defaultProps: Props = {
     className: null,
     mode: 'vertical',
     theme: 'light',
@@ -38,11 +38,11 @@ const getItem = (
 }
 
 const AppMenu: React.FC<Props> = (props) => {
-    const { menu, className, mode, theme } = { ...props}
+    const {menu, className, mode, theme} = {...props}
     const [MenuItems, setMenuItems] = useState<Array<MenuItem>>([])
     const router = useRouter();
-    const [current, setCurrent] = useState<string>('0');
-    const { t } = useTranslation('translation')
+    const [current, setCurrent] = useState<string>('1');
+    const {t} = useTranslation('translation')
 
     const getMenu = () => {
         if (MenuItems && MenuItems.length === 0) {
@@ -87,8 +87,20 @@ const AppMenu: React.FC<Props> = (props) => {
                             items={MenuItems}
                             onClick={handleClick}
                         />
+
                     </>
                 )}
+                 {/*<div className='ant-menu'>*/}
+                {/*    {menu && menu.length > 0 && menu.map((item, index) => (*/}
+                {/*        <div className='ant-menu-item' key={index}>*/}
+                {/*            <a href='/'>*/}
+                {/*                <div className='ant-menu-title-content'>{*/}
+                {/*                    t(item.title)*/}
+                {/*                }</div>*/}
+                {/*            </a>*/}
+                {/*        </div>*/}
+                {/*    ))}*/}
+                {/*</div>*/}
             </div>
         </>
     )
