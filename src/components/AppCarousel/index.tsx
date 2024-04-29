@@ -36,7 +36,7 @@ const SamplePrevArrow = (props: any) => {
     const {className, style, onClick} = props;
     return (
         <div className='app-slick-prev' style={{...style}} onClick={onClick}>
-            <AppSvgIcon className={className} name='ChevronLeftIcon' onClick={onClick}
+            <AppSvgIcon className={className} name='ChevronLeftIcon'
             />
         </div>
     )
