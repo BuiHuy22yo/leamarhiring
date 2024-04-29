@@ -151,33 +151,6 @@
           max-width: 59px;
         }
 
-        .app-carousel-item {
-          padding: 10px;
-          border: 1px solid $color-white;
-          border-radius: 14px;
-
-          &:hover {
-            background: $color-white;
-          }
-
-          .app-image {
-            display: flex;
-
-            .ant-image-img {
-              border-radius: 10px;
-            }
-          }
-
-          .title {
-            margin-top: 20px;
-            font-weight: 600;
-          }
-
-          .description {
-            margin-top: 20px;
-          }
-        }
-
         .ellipse {
           position: absolute;
           top: -16px;

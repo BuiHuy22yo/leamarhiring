@@ -8,26 +8,31 @@ import urlSkuad from '@/assets/images/logo-Skuad.png'
 import urlDeel from '@/assets/images/logo-Deel.png'
 import urlJago from '@/assets/images/logo-Jago.png'
 
-const FooterGeneral : Array<MenuObject> = [
+const FooterGeneral = [
     {
         path: '/',
         title: 'home.title',
+        name: 'home'
     },
     {
-        path: '/about',
+        path: '/',
         title: 'about.title',
+        name: 'about-us'
     },
     {
-        path: '/services',
+        path: '/',
         title: 'services.title',
+        name: 'services'
     },
     {
-        path: '/blog',
+        path: '/',
         title: 'blog.title',
+        name: 'blog'
     },
     {
-        path: '/why-us',
+        path: '/',
         title: 'why-us.title',
+        name: 'why-us'
     },
 ]
 
@@ -70,26 +75,31 @@ const FooterFollowUs = [
     },
 ]
 
-const AppMenuArray: Array<MenuObject> = [
+const AppMenuArray = [
     {
         path: '/',
         title: 'home.title',
+        name: 'home'
     },
     {
-        path: '/about',
+        path: '/',
         title: 'about.title',
+        name: 'about-us'
     },
     {
-        path: '/services',
+        path: '/',
         title: 'services.title',
+        name: 'services'
     },
     {
-        path: '/blog',
+        path: '/',
         title: 'blog.title',
+        name: 'blog'
     },
     {
-        path: '/why-us',
+        path: '/',
         title: 'why-us.title',
+        name: 'why-us'
     },
 ]
 

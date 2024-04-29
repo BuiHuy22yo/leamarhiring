@@ -4,7 +4,7 @@ import {Col, Menu} from 'antd'
 import React, {useEffect, useState} from 'react';
 import {MenuItem, MenuObject} from '@/types/menu'
 import type {MenuProps} from 'antd'
-import { useRouter} from 'next/navigation';
+import {useParams, useRouter} from 'next/navigation';
 import {useTranslation} from '@/locales/client'
 import AppSvgIcon from '@/components/AppSvgIcon/index';
 import AppLogo from "./AppLogo";
@@ -44,6 +44,9 @@ const AppMenu: React.FC<Props> = (props) => {
     const [current, setCurrent] = useState<string>('1');
     const {t} = useTranslation('translation')
 
+    const params = useParams()
+    console.log('params', params)
+
     const getMenu = () => {
         if (MenuItems && MenuItems.length === 0) {
             const items: Array<MenuItem> = getListItem(menu)
@@ -78,29 +81,29 @@ const AppMenu: React.FC<Props> = (props) => {
     return (
         <>
             <div className={`app-menu ${className || ''}`}>
-                {MenuItems && (
-                    <>
-                        <Menu
-                            defaultSelectedKeys={[current]}
-                            mode={mode}
-                            theme={theme}
-                            items={MenuItems}
-                            onClick={handleClick}
-                        />
+                {/*{MenuItems && (*/}
+                {/*    <>*/}
+                {/*        <Menu*/}
+                {/*            defaultSelectedKeys={[current]}*/}
+                {/*            mode={mode}*/}
+                {/*            theme={theme}*/}
+                {/*            items={MenuItems}*/}
+                {/*            onClick={handleClick}*/}
+                {/*        />*/}
 
-                    </>
-                )}
-                 {/*<div className='ant-menu'>*/}
-                {/*    {menu && menu.length > 0 && menu.map((item, index) => (*/}
-                {/*        <div className='ant-menu-item' key={index}>*/}
-                {/*            <a href='/'>*/}
-                {/*                <div className='ant-menu-title-content'>{*/}
-                {/*                    t(item.title)*/}
-                {/*                }</div>*/}
-                {/*            </a>*/}
-                {/*        </div>*/}
-                {/*    ))}*/}
-                {/*</div>*/}
+                {/*    </>*/}
+                {/*)}*/}
+                 <div className='ant-menu'>
+                    {menu && menu.length > 0 && menu.map((item, index) => (
+                        <div className='ant-menu-item' key={index}>
+                            <a href={item.name !== 'home' ? `#${item.name}` : item.path}>
+                                <div className='ant-menu-title-content'>{
+                                    t(item.title)
+                                }</div>
+                            </a>
+                        </div>
+                    ))}
+                </div>
             </div>
         </>
     )

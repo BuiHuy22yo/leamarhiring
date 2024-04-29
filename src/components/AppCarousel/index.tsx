@@ -7,7 +7,10 @@ import AppImages from '@/components/AppImages/index'
 // import 'owl.carousel/dist/assets/owl.carousel.css';
 // import 'owl.carousel/dist/assets/owl.theme.default.css';
 import AppButton from "../AppButton/index";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import AppSvgIcon from '@/components/AppSvgIcon/index'
 
 interface Props {
     carouselArray?: Array<any>
@@ -19,31 +22,64 @@ const defaultProps: Props = {
     className: null,
 }
 
+const SampleNextArrow = (props: any) => {
+    const {className, style, onClick} = props;
+    return (
+        <div className='app-slick-next' style={{...style}} onClick={onClick}>
+            <AppSvgIcon className={className}  name='ChevronRightIcon'
+            />
+        </div>
+    )
+}
+
+const SamplePrevArrow = (props: any) => {
+    const {className, style, onClick} = props;
+    return (
+        <div className='app-slick-prev' style={{...style}} onClick={onClick}>
+            <AppSvgIcon className={className} name='ChevronLeftIcon' onClick={onClick}
+            />
+        </div>
+    )
+}
+
 const AppCarousel: React.FC<Props> = (props) => {
     // const { type, carouselArray, className } = { ...props }
     const {carouselArray, className} = {...props}
 
-    const options = {
-        loop: true,
-        center: true,
-        items: 3,
-        margin: 0,
-        autoplay: true,
-        dots: true,
-        autoplayTimeout: 8500,
-        smartSpeed: 450,
-        nav: false,
-        responsive: {
-            0: {
-                items: 1
+    const settings = {
+        dots: false,
+        infinite: true,
+        slidesToShow: 3.3,
+        slidesToScroll: 1,
+        initialSlide: 0,
+        autoplay: false,
+        speed: 500,
+        autoplaySpeed: 2000,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
             },
-            600: {
-                items: 3
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
             },
-            1000: {
-                items: 4
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
             }
-        }
+        ]
     };
 
     return (
@@ -56,17 +92,15 @@ const AppCarousel: React.FC<Props> = (props) => {
             {/*<div>1</div>*/}
             {/*<div>1</div>*/}
             {/*</OwlCarousel>*/}
-            <Row gutter={[20, 20]}>
+            <Slider {...settings}>
                 {carouselArray && carouselArray.length > 0 && carouselArray.map((item, index) => (
-                    <Col xs={24} sm={24} md={12} lg={8} xl={6} xxl={6} key={index}>
-                        <div className='app-carousel-item'>
-                            <AppImages src={item.urlImage}/>
-                            <h3 className='title'>{item.title}</h3>
-                            <div className='description'>{item.description}</div>
-                        </div>
-                    </Col>
+                    <div className='app-carousel-item' key={index}>
+                        <AppImages src={item.urlImage}/>
+                        <h3 className='title'>{item.title}</h3>
+                        <div className='description'>{item.description}</div>
+                    </div>
                 ))}
-            </Row>
+            </Slider>
         </div>
 
     )

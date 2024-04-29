@@ -33,7 +33,7 @@ import urlEmployment from '@/assets/images/employment.png'
 import urlCarouselItem_1 from '@/assets/images/carouselItem-1.png'
 import urlCarouselItem_2 from '@/assets/images/carouselItem-2.png'
 import urlCarouselItem_3 from '@/assets/images/carouselItem-3.png'
-import urlCarouselItem_4 from '@/assets/images/carouselItem-4.png'
+import urlCarouselItem_4 from '@/assets/images/carouselItem-2.png'
 import urlEllipse from '@/assets/images/ellipse.png'
 import urlContactDecorate_1 from '@/assets/images/contact-decorate-1.png'
 import urlContactDecorate_2 from '@/assets/images/contact-decorate-2.png'
@@ -128,7 +128,7 @@ const PageHome = () => {
                     </div>
                 </div>
             </div>
-            <div id='#about-us' className="content-item">
+            <div id='about-us' className="content-item">
                 <div className='app-container mx-auto px-5'>
                     <div className="content-item-wrapper content-item-wrapper-relative">
                         <Row gutter={[40, 40]}>
@@ -176,7 +176,7 @@ const PageHome = () => {
                     </div>
                 </div>
             </div>
-            <div id='#services' className="content-item" style={{marginTop: '0'}}>
+            <div id='services' className="content-item" style={{marginTop: '0'}}>
                 <div className='app-container mx-auto px-5'>
                     <div className="content-item-wrapper">
                         <h1 className="text-center mb-3 mt-2 ">
@@ -228,7 +228,7 @@ const PageHome = () => {
                     </div>
                 </div>
             </div>
-            <div id='#why-us' className="content-item" style={{marginTop: '0'}}>
+            <div id='why-us' className="content-item" style={{marginTop: '0'}}>
                 <div className='app-container mx-auto px-5'>
                     <div className="content-item-wrapper">
                         <h1 className="text-center mb-3 mt-3">
@@ -252,10 +252,10 @@ const PageHome = () => {
                     </div>
                 </div>
             </div>
-            <div id='#blog' className="content-item color-bg-primary" style={{marginTop: '0'}}>
+            <div id='blog' className="content-item color-bg-primary" style={{marginTop: '0'}}>
                 <div className='app-container mx-auto px-5'>
                     <div className="content-item-wrapper">
-                        <h1 className="mb-4 relative">
+                        <h1 className="mb-10 relative">
                             Latest Blog
                             <AppImages src={urlEllipse.src} className='ellipse ellipse-blog'/>
                         </h1>
@@ -263,7 +263,7 @@ const PageHome = () => {
                     </div>
                 </div>
             </div>
-            <div id='#brands' className="content-item" style={{marginTop: '0'}}>
+            <div id='brands' className="content-item" style={{marginTop: '0'}}>
                 <div className='app-container-fluid mx-auto px-5'>
                     <div className="content-item-wrapper">
                         <h1 className="text-center mb-4">
@@ -310,7 +310,7 @@ const PageHome = () => {
                     </div>
                 </div>
             </div>
-            <div id='#contact-us' className="content-item" style={{marginTop: '0'}}>
+            <div id='contact-us' className="content-item" style={{marginTop: '0'}}>
                 <div className='app-container mx-auto px-5'>
                     <div className="content-item-wrapper color-bg-primary content-item-wrapper-relative">
                         <div className="inner-text">
