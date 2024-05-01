@@ -1,6 +1,6 @@
 "use client"
 
-import url from '@/assets/icons/svg/logo.png'
+import url from '@/assets/icons/svg/logo_hd_global_career.png'
 import { useTranslation } from '@/locales/client'
 import {useRouter} from "next/navigation";
 import React from "react";
@@ -12,17 +12,19 @@ interface Props {
     showTitle?: boolean,
     title?: string | null,
     className?: string | null,
+    src?: string | null,
 }
 
 const defaultProps: Props = {
     showLogo: true,
-    showTitle: true,
+    showTitle: false,
     title: null,
     className: null,
+    src: null,
 }
 
 const AppLogo: React.FC<Props> = (props) => {
-    const { showLogo, showTitle, title, className} = { ...props }
+    const { showLogo, showTitle, title, className, src} = { ...props }
     const { t } = useTranslation('translation')
     const router = useRouter();
 
@@ -32,10 +34,19 @@ const AppLogo: React.FC<Props> = (props) => {
 
     return (
         <>
-            <div className={`app-logo flex items-center cursor-pointer ${className || ''}`} onClick={() => handleClick()}>
+            <div className={`app-logo cursor-pointer ${className || ''}`} onClick={() => handleClick()}>
                 {showLogo &&  (
                     <>
-                        <img src={url.src} alt='logo' className='logo-images'/>
+                        {src ?  (
+                            <>
+                                <img src={src} alt='logo' className='logo-images'/>
+                            </>
+                        ): (
+                            <>
+                                <img src={url.src} alt='logo' className='logo-images'/>
+                            </>
+                        )
+                        }
                     </>
                 )
                 }

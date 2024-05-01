@@ -113,12 +113,14 @@ const PageHome = () => {
                                         potential
                                         and connect with the world.
                                     </p>
+                                    <a href='#about-us'>
                                     <AppButton className='pt-4 app-btn-border-primary'>
                                         <div className='flex items-center'>
                                             <span className='mr-3'>Get Started</span>
                                             <AppSvgIcon name='ChevronDownIcon'/>
                                         </div>
                                     </AppButton>
+                                    </a>
                                 </div>
                             </Col>
                             <Col xs={24} sm={24} md={24} lg={13} xl={13} xxl={13} style={{textAlign: 'end'}}>
@@ -325,14 +327,14 @@ const PageHome = () => {
                                     <AppImages src={urlPhone.src} className='w-[28px] h-[28px]'/>
                                     <div className='ml-2'>
                                         <div className='mb-1 text'>Phone</div>
-                                        <div className='color-text-primary info'>090 123 4459</div>
+                                        <div className='color-text-primary info'>0364703790</div>
                                     </div>
                                 </div>
                                 <div className='flex items-center item-email'>
                                     <AppImages src={urlEmail.src} className='w-[28px] h-[28px]'/>
                                     <div className='ml-2'>
                                         <div className='mb-1 text'>Email</div>
-                                        <div className='color-text-primary info'>info@hdcareer.com</div>
+                                        <div className='color-text-primary info'>ha.dao@hdglobalcareer.com</div>
                                     </div>
                                 </div>
                             </div>

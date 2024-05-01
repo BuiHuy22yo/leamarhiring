@@ -6,6 +6,7 @@ import AppLogo from '@/components/AppMenu/AppLogo'
 import AppMenu from '@/components/AppMenu/AppMenu'
 import {FooterGeneral, FooterServices, FooterFollowUs} from '@/router/index'
 import {useRouter} from "next/navigation";
+import url from '@/assets/icons/svg/logo_hd_global_career_footer.png'
 
 const AppGlobalFooter = () => {
     const router = useRouter();
@@ -23,7 +24,7 @@ const AppGlobalFooter = () => {
                             <div className='inner-footer-top'>
                                 <Row gutter={[40, 40]}>
                                     <Col xs={24} sm={24} md={12} lg={12} xl={12} xxl={12}>
-                                        <AppLogo className='app-logo-footer' showTitle={true}/>
+                                        <AppLogo className='app-logo-footer' showTitle={false} src={url.src}/>
                                         <div className='mt-6'>
                                             <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
                                                 dolore eu fugiat</p>

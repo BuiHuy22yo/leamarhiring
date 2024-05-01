@@ -27,8 +27,7 @@
         }
 
         .ant-menu-title-content {
-          //color: $color-secondary;
-          color: $color-black;
+          color: $color-secondary;
           font-weight: 500;
         }
       }
@@ -59,6 +58,11 @@
           &:after {
             border-color: $color-primary;
             border-width: 0;
+          }
+
+          .ant-menu-title-content {
+            color: $color-black;
+            font-weight: 500;
           }
         }
       }
