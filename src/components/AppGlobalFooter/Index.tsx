@@ -26,8 +26,11 @@ const AppGlobalFooter = () => {
                                     <Col xs={24} sm={24} md={12} lg={12} xl={12} xxl={12}>
                                         <AppLogo className='app-logo-footer' showTitle={false} src={url.src}/>
                                         <div className='mt-6'>
-                                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                                dolore eu fugiat</p>
+                                            <p>Remote work opens the doors to a worldwide talent pool, allowing
+                                                businesses to recruit top professionals regardless of their physical
+                                                location. This newfound flexibility fosters diversity and high
+                                                performance within teams. We are here to bring you to the forefront of
+                                                accessing a global talent pool</p>
                                         </div>
                                     </Col>
                                     <Col xs={24} sm={24} md={12} lg={6} xl={6} xxl={6}>

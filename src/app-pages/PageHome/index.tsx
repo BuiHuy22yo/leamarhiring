@@ -327,7 +327,7 @@ const PageHome = () => {
                                     <AppImages src={urlPhone.src} className='w-[28px] h-[28px]'/>
                                     <div className='ml-2'>
                                         <div className='mb-1 text'>Phone</div>
-                                        <div className='color-text-primary info'>0364703790</div>
+                                        <div className='color-text-primary info'>+84364703790</div>
                                     </div>
                                 </div>
                                 <div className='flex items-center item-email'>

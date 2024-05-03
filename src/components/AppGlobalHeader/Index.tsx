@@ -38,7 +38,9 @@ const AppGlobalHeader = ({ ...props }: Props) => {
             <Col xs={24} sm={24} md={18} lg={18} xl={18} xxl={18}>
               <div className='inner-header flex items-center'>
               <AppMenu menu={AppMenuArray} className='app-menu-header lg:mr-4' mode={'horizontal'}/>
-              <AppButton type={'primary'} className='app-btn-header'>Contact now</AppButton>
+                <a href="#contact-us">
+                  <AppButton type={'primary'} className='app-btn-header'>Contact now</AppButton>
+                </a>
                 {/*<div className='app-menu-trigger' onClick={ handleClickVisible }>*/}
                 {/*  {visible ? (*/}
                 {/*    <MenuUnfoldOutlined className='trigger' />*/}
