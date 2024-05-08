@@ -27,6 +27,12 @@
     .content {
       .content-item {
         padding: 101px 0;
+        @media screen and (max-width: 767px) {
+          padding: 40px 0;
+        }
+        @media screen and (max-width: 1023px) and (min-width: 768px) {
+          padding: 75px 0;
+        }
 
         &:not(:first-child) {
           margin-top: 75px;
@@ -65,6 +71,15 @@
           top: -107px;
           max-width: 103px;
           transform: rotate(15deg);
+          @media screen and (max-width: 1199px) {
+            display: none;
+          }
+          @media screen and (max-width: 1339px) and (min-width: 1200px) {
+            right: -40px;
+          }
+          @media screen and (min-width: 1340px) {
+            right: -103px;
+          }
         }
 
         .decorate-2-about {
@@ -74,7 +89,15 @@
           bottom: 40px;
           max-width: 47px;
           height: auto;
-
+          @media screen and (max-width: 1199px) {
+            display: none;
+          }
+          @media screen and (max-width: 1339px) and (min-width: 1200px) {
+            right: -40px;
+          }
+          @media screen and (min-width: 1340px) {
+            right: -47px;
+          }
         }
 
         .services-wrapper {
@@ -100,6 +123,10 @@
           padding-left: 77px;
           border-radius: 16px;
 
+          @media screen and (max-width: 767px)  {
+            max-width: 100%;
+            padding:20px;
+          }
           .info-wrapper {
             .text {
               font-size: 13px;
@@ -109,6 +136,10 @@
             .info {
               font-size: 20px;
               font-weight: 600;
+            }
+
+            @media screen and (max-width: 600px)  {
+              display: block;
             }
           }
         }
@@ -126,12 +157,29 @@
           position: absolute;
           top: 0;
           right: 0;
+          @media screen and (max-width: 767px)  {
+            display: none;
+          }
         }
 
         .employment-contact {
           position: absolute;
           right: -68px;
           bottom: -6px;
+          @media screen and (max-width: 991px)  {
+            display: none;
+          }
+          @media screen and (max-width: 1199px) and (min-width: 992px)  {
+            right: -35px;
+            width: 50%;
+            text-align: end;
+          }
+          @media screen and (max-width: 1339px) and (min-width: 1200px) {
+            right: -40px;
+          }
+          @media screen and (min-width: 1340px) {
+            right: -68px;
+          }
         }
 
         .decorate-1-contact {
@@ -141,6 +189,9 @@
           right: 0;
           max-width: 27px;
           transform: rotate(0deg);
+          @media screen and (max-width: 991px) {
+            display: none;
+          }
         }
 
         .decorate-2-contact {
@@ -149,6 +200,15 @@
           right: -65px;
           bottom: -30px;
           max-width: 59px;
+          @media screen and (max-width: 1199px) {
+            display: none;
+          }
+          @media screen and (max-width: 1339px) and (min-width: 1200px) {
+            right: -40px;
+          }
+          @media screen and (min-width: 1340px) {
+            right: -65px;
+          }
         }
 
         .ellipse {

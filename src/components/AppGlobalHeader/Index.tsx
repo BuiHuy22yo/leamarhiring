@@ -28,14 +28,14 @@ const AppGlobalHeader = ({ ...props }: Props) => {
   return (
     <>
       <div className='header'>
-        <div className='app-container-header mx-auto px-5'>
+        <div className='app-container-md-header mx-auto px-5'>
           <Row gutter={[40, 40]}>
-            <Col xs={24} sm={24} md={6} lg={6} xl={6} xxl={6}>
+            <Col xs={6} sm={6} md={6} lg={6} xl={6} xxl={6}>
               <div className='inner-header flex items-center'>
                 <AppLogo className='app-logo-header mr-auto'/>
               </div>
             </Col>
-            <Col xs={24} sm={24} md={18} lg={18} xl={18} xxl={18}>
+            <Col xs={18} sm={18} md={18} lg={18} xl={18} xxl={18}>
               <div className='inner-header flex items-center'>
               <AppMenu menu={AppMenuArray} className='app-menu-header lg:mr-4' mode={'horizontal'}/>
                 <a href="#contact-us">

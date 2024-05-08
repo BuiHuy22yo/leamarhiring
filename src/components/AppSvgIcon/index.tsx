@@ -25,7 +25,7 @@ const defaultProps: Props = {
     rotate: null
 }
 
-const defaultClassSvg = 'md:w-3 md:h-3 lg:w-5 lg:h-5'
+const defaultClassSvg = 'md:w-5 md:h-5 lg:w-5 lg:h-5 xl:w-6 xl:h-6'
 const disabledClassSvg = 'disabled'
 
 const AppSvgIcon: React.FC<Props> = (props) => {

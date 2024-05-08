@@ -37,6 +37,30 @@ import urlCarouselItem_4 from '@/assets/images/carouselItem-2.png'
 import urlEllipse from '@/assets/images/ellipse.png'
 import urlContactDecorate_1 from '@/assets/images/contact-decorate-1.png'
 import urlContactDecorate_2 from '@/assets/images/contact-decorate-2.png'
+import Slider from "react-slick";
+import urlBrandsItem_1 from '@/assets/images/logo-01.png'
+import urlBrandsItem_2 from '@/assets/images/logo-02.png'
+import urlBrandsItem_3 from '@/assets/images/logo-03.png'
+
+const SampleNextArrow = (props: any) => {
+    const {className, style, onClick} = props;
+    return (
+        <div className='app-slick-next' style={{...style}} onClick={onClick}>
+            <AppSvgIcon className={className}  name='ChevronRightIcon'
+            />
+        </div>
+    )
+}
+
+const SamplePrevArrow = (props: any) => {
+    const {className, style, onClick} = props;
+    return (
+        <div className='app-slick-prev' style={{...style}} onClick={onClick}>
+            <AppSvgIcon className={className} name='ChevronLeftIcon'
+            />
+        </div>
+    )
+}
 
 const PageHome = () => {
     const items: CollapseProps['items'] = [
@@ -87,6 +111,54 @@ const PageHome = () => {
 
     const [form] = Form.useForm()
 
+    const brandsArray = [
+        {
+            urlImage: urlBrandsItem_1.src
+        },
+        {
+            urlImage: urlBrandsItem_2.src
+        },
+        {
+            urlImage: urlBrandsItem_3.src
+        },
+    ]
+
+    const brandsSettings = {
+        dots: false,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        initialSlide: 0,
+        autoplay: true,
+        speed: 500,
+        autoplaySpeed: 2000,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    }
+
     const onFinish = async (values: any) => {
         const params = {
             ...values,
@@ -97,7 +169,7 @@ const PageHome = () => {
     return (
         <>
             <div className="content-item color-bg-primary">
-                <div className='app-container mx-auto px-5'>
+                <div className='app-container-md mx-auto px-5'>
                     <div className="content-item-wrapper">
                         <Row gutter={[40, 40]}>
                             <Col xs={24} sm={24} md={24} lg={11} xl={11} xxl={11}
@@ -130,11 +202,11 @@ const PageHome = () => {
                     </div>
                 </div>
             </div>
-            <div id='about-us' className="content-item">
-                <div className='app-container mx-auto px-5'>
+            <div id='about-us' className="content-item" style={{marginTop: '0'}}>
+                <div className='app-container-md mx-auto px-5'>
                     <div className="content-item-wrapper content-item-wrapper-relative">
                         <Row gutter={[40, 40]}>
-                            <Col xs={24} sm={24} md={24} lg={10} xl={10} xxl={10}>
+                            <Col xs={24} sm={24} md={24} lg={12} xl={10} xxl={10}>
                                 <h1 className="mb-3 mt-3 relative">
                                     About us
                                     <AppImages src={urlEllipse.src} className='ellipse ellipse-about'/>
@@ -169,7 +241,7 @@ const PageHome = () => {
                                     </div>
                                 </div>
                             </Col>
-                            <Col xs={24} sm={24} md={24} lg={14} xl={14} xxl={14} style={{textAlign: 'end'}}>
+                            <Col xs={24} sm={24} md={24} lg={12} xl={14} xxl={14} style={{textAlign: 'end'}}>
                                 <AppImages src={urlAbout.src}/>
                             </Col>
                         </Row>
@@ -179,7 +251,7 @@ const PageHome = () => {
                 </div>
             </div>
             <div id='services' className="content-item" style={{marginTop: '0'}}>
-                <div className='app-container mx-auto px-5'>
+                <div className='app-container-md mx-auto px-5'>
                     <div className="content-item-wrapper">
                         <h1 className="text-center mb-3 mt-2 ">
                             <span className='relative'>Our Services
@@ -231,7 +303,7 @@ const PageHome = () => {
                 </div>
             </div>
             <div id='why-us' className="content-item" style={{marginTop: '0'}}>
-                <div className='app-container mx-auto px-5'>
+                <div className='app-container-md mx-auto px-5'>
                     <div className="content-item-wrapper">
                         <h1 className="text-center mb-3 mt-3">
                             <span>Why you choose</span>
@@ -254,8 +326,8 @@ const PageHome = () => {
                     </div>
                 </div>
             </div>
-            <div id='blog' className="content-item color-bg-primary" style={{marginTop: '0'}}>
-                <div className='app-container mx-auto px-5'>
+            <div id='blog' className="content-item color-bg-primary hidden" style={{marginTop: '0'}}>
+                <div className='app-container-md mx-auto px-5'>
                     <div className="content-item-wrapper">
                         <h1 className="mb-10 relative">
                             Latest Blog
@@ -265,55 +337,26 @@ const PageHome = () => {
                     </div>
                 </div>
             </div>
-            <div id='brands' className="content-item" style={{marginTop: '0'}}>
-                <div className='app-container-fluid mx-auto px-5'>
+            <div id='brands' className="content-item color-bg-secondary" style={{marginTop: '0'}}>
+                <div className='app-container-md mx-auto px-5'>
                     <div className="content-item-wrapper">
                         <h1 className="text-center mb-4">
-                            Trusted by Leading Brands
+                            Trusted by start-ups and companies worldwide.
                         </h1>
-                        <Row gutter={[40, 40]} style={{marginTop: '90px'}}>
-                            <Col xs={24} sm={24} md={24} lg={6} xl={4} xxl={4}>
-                                <AppImages src={urlBrands.src}/>
-                            </Col>
-                            <Col xs={24} sm={24} md={24} lg={6} xl={4} xxl={4}>
-                                <AppImages src={urlBrands.src}/>
-                            </Col>
-                            <Col xs={24} sm={24} md={24} lg={6} xl={4} xxl={4}>
-                                <AppImages src={urlBrands.src}/>
-                            </Col>
-                            <Col xs={24} sm={24} md={24} lg={6} xl={4} xxl={4}>
-                                <AppImages src={urlBrands.src}/>
-                            </Col>
-                            <Col xs={24} sm={24} md={24} lg={6} xl={4} xxl={4}>
-                                <AppImages src={urlBrands.src}/>
-                            </Col>
-                            <Col xs={24} sm={24} md={24} lg={6} xl={4} xxl={4}>
-                                <AppImages src={urlBrands.src}/>
-                            </Col>
-                            <Col xs={24} sm={24} md={24} lg={6} xl={4} xxl={4}>
-                                <AppImages src={urlBrands.src}/>
-                            </Col>
-                            <Col xs={24} sm={24} md={24} lg={6} xl={4} xxl={4}>
-                                <AppImages src={urlBrands.src}/>
-                            </Col>
-                            <Col xs={24} sm={24} md={24} lg={6} xl={4} xxl={4}>
-                                <AppImages src={urlBrands.src}/>
-                            </Col>
-                            <Col xs={24} sm={24} md={24} lg={6} xl={4} xxl={4}>
-                                <AppImages src={urlBrands.src}/>
-                            </Col>
-                            <Col xs={24} sm={24} md={24} lg={6} xl={4} xxl={4}>
-                                <AppImages src={urlBrands.src}/>
-                            </Col>
-                            <Col xs={24} sm={24} md={24} lg={6} xl={4} xxl={4}>
-                                <AppImages src={urlBrands.src}/>
-                            </Col>
-                        </Row>
+                        <div className='app-carousel-brands' style={{marginTop: '90px'}}>
+                            <Slider {...brandsSettings}>
+                                {brandsArray && brandsArray.length > 0 && brandsArray.map((item, index) => (
+                                    <div className='brands-item' key={index}>
+                                        <AppImages src={item.urlImage}/>
+                                    </div>
+                                ))}
+                            </Slider>
+                        </div>
                     </div>
                 </div>
             </div>
             <div id='contact-us' className="content-item" style={{marginTop: '0'}}>
-                <div className='app-container mx-auto px-5'>
+                <div className='app-container-md mx-auto px-5'>
                     <div className="content-item-wrapper color-bg-primary content-item-wrapper-relative">
                         <div className="inner-text">
                             <h1 className="mt-3 mb-12 relative">

@@ -24,11 +24,11 @@ const FooterGeneral = [
         title: 'services.title',
         name: 'services'
     },
-    {
-        path: '/',
-        title: 'blog.title',
-        name: 'blog'
-    },
+    // {
+    //     path: '/',
+    //     title: 'blog.title',
+    //     name: 'blog'
+    // },
     {
         path: '/',
         title: 'why-us.title',
@@ -91,11 +91,11 @@ const AppMenuArray = [
         title: 'services.title',
         name: 'services'
     },
-    {
-        path: '/',
-        title: 'blog.title',
-        name: 'blog'
-    },
+    // {
+    //     path: '/',
+    //     title: 'blog.title',
+    //     name: 'blog'
+    // },
     {
         path: '/',
         title: 'why-us.title',

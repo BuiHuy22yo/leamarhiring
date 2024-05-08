@@ -152,8 +152,8 @@ p {
 }
 
 .color-bg-secondary {
-  background-color: $bg-color-primary-hover !important;
-  color: $color-primary !important;
+  background-color: $bg-color-secondary-1 !important;
+  //color: $color-primary !important;
 }
 
 .color-bg-hover-menu {
@@ -163,11 +163,6 @@ p {
 
 .color-text-primary {
   color: $color-primary !important;
-}
-
-.color-bg-secondary {
-  background-color: $bg-color-primary !important;
-  color: inherit !important;
 }
 
 .border-bottom-primary {
