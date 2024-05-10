@@ -46,7 +46,7 @@ const SampleNextArrow = (props: any) => {
     const {className, style, onClick} = props;
     return (
         <div className='app-slick-next' style={{...style}} onClick={onClick}>
-            <AppSvgIcon className={className}  name='ChevronRightIcon'
+            <AppSvgIcon className={className} name='ChevronRightIcon'
             />
         </div>
     )
@@ -132,8 +132,8 @@ const PageHome = () => {
         autoplay: true,
         speed: 500,
         autoplaySpeed: 2000,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />,
+        nextArrow: <SampleNextArrow/>,
+        prevArrow: <SamplePrevArrow/>,
         responsive: [
             {
                 breakpoint: 1024,
@@ -186,12 +186,12 @@ const PageHome = () => {
                                         and connect with the world.
                                     </p>
                                     <a href='#about-us'>
-                                    <AppButton className='pt-4 app-btn-border-primary'>
-                                        <div className='flex items-center'>
-                                            <span className='mr-3'>Get Started</span>
-                                            <AppSvgIcon name='ChevronDownIcon'/>
-                                        </div>
-                                    </AppButton>
+                                        <AppButton className='pt-4 app-btn-border-primary'>
+                                            <div className='flex items-center'>
+                                                <span className='mr-3'>Get Started</span>
+                                                <AppSvgIcon name='ChevronDownIcon'/>
+                                            </div>
+                                        </AppButton>
                                     </a>
                                 </div>
                             </Col>
@@ -337,20 +337,26 @@ const PageHome = () => {
                     </div>
                 </div>
             </div>
-            <div id='brands' className="content-item color-bg-secondary" style={{marginTop: '0'}}>
+            <div id='brands' className="content-item content-item-brands" style={{marginTop: '0'}}>
                 <div className='app-container-md mx-auto px-5'>
                     <div className="content-item-wrapper">
                         <h1 className="text-center mb-4">
                             Trusted by start-ups and companies worldwide.
                         </h1>
-                        <div className='app-carousel-brands' style={{marginTop: '90px'}}>
-                            <Slider {...brandsSettings}>
-                                {brandsArray && brandsArray.length > 0 && brandsArray.map((item, index) => (
-                                    <div className='brands-item' key={index}>
-                                        <AppImages src={item.urlImage}/>
-                                    </div>
-                                ))}
-                            </Slider>
+                    </div>
+                </div>
+                <div className='color-bg-secondary wrapper-carousel-brands'>
+                    <div className='app-container-md mx-auto px-5'>
+                        <div className="content-item-wrapper">
+                            <div className='app-carousel-brands'>
+                                <Slider {...brandsSettings}>
+                                    {brandsArray && brandsArray.length > 0 && brandsArray.map((item, index) => (
+                                        <div className='brands-item' key={index}>
+                                            <AppImages src={item.urlImage}/>
+                                        </div>
+                                    ))}
+                                </Slider>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -404,7 +410,7 @@ const PageHome = () => {
                                     <Col xs={24} md={24} lg={24}>
                                         <Form.Item className='app-last-form-item'>
                                             <AppButton type={'primary'} className='btn-w-full'
-                                                       >Submit</AppButton>
+                                            >Submit</AppButton>
                                         </Form.Item>
                                     </Col>
                                 </Row>
